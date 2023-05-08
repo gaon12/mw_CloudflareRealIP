@@ -1,0 +1,18 @@
+{
+    "name": "CloudflareRealIP",
+    "author": "Jeong Gaon",
+    "url": "https://www.gaon.xyz",
+    "description": "Restores the original IP address of the user when using Cloudflare.",
+    "version": "1.0",
+	"license-name": "MIT",
+    "type": "extension",
+    "AutoloadClasses": {
+        "CloudflareRealIPHooks": "includes/CloudflareRealIPHooks.php"
+    },
+    "Hooks": {
+        "UserGetIP": [
+            "CloudflareRealIPHooks::onUserGetIP"
+        ]
+    },
+    "manifest_version": 2
+}
